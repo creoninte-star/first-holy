@@ -54,13 +54,13 @@ const Hero = () => {
            initial={{ opacity: 0, scale: 0.95 }}
            whileInView={{ opacity: 1, scale: 1 }}
            transition={{ duration: 1.5, ease: "easeOut" }}
-           style={{ margin: '20px 0' }}
+           style={{ margin: '20px 0', width: '100%' }}
         >
-          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', marginBottom: '10px', color: 'var(--navy)' }}>
+          <h1 className="hero-title" style={{ fontSize: 'var(--h1-size)', marginBottom: '10px', color: 'var(--navy)', wordWrap: 'break-word' }}>
             First Holy <br /> Communion
           </h1>
           <div className="divider-gold" style={{ margin: '20px auto' }} />
-          <h2 style={{ fontSize: '2rem', letterSpacing: '0.3em', color: 'var(--gold-dark)', textTransform: 'uppercase' }}>
+          <h2 style={{ fontSize: 'clamp(1.2rem, 5vw, 2rem)', letterSpacing: '0.3em', color: 'var(--gold-dark)', textTransform: 'uppercase' }}>
             Adrian Mathew
           </h2>
         </motion.div>

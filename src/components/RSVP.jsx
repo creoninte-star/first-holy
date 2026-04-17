@@ -11,7 +11,7 @@ const RSVP = () => {
 
   return (
     <section id="rsvp" className="section-container" style={{ textAlign: 'center' }}>
-      <div className="card-luxury" style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--ivory)' }}>
+      <div className="card-luxury" style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--ivory)', width: '100%' }}>
         {!submitted ? (
           <form onSubmit={handleSubmit} style={{ textAlign: 'left' }}>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
@@ -20,7 +20,7 @@ const RSVP = () => {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+            <div className="grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
               <div className="form-group">
                 <label style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '10px', color: 'var(--gold-dark)' }}>Full Name</label>
                 <input 

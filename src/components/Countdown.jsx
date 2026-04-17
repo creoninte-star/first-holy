@@ -61,20 +61,20 @@ const Countdown = () => {
   return (
     <section id="countdown" style={{ 
       background: 'white', 
-      padding: '80px 20px', 
+      padding: 'var(--section-padding) 20px', 
       borderTop: '1px solid rgba(212, 175, 55, 0.1)',
       borderBottom: '1px solid rgba(212, 175, 55, 0.1)',
       textAlign: 'center'
     }}>
-      <div className="section-container">
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '40px', color: 'var(--text-muted)' }}>The Blessed Day Approaches</h2>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div className="section-container" style={{ padding: '0 10px' }}>
+        <h2 style={{ fontSize: 'clamp(1rem, 4vw, 1.5rem)', marginBottom: '30px', color: 'var(--text-muted)' }}>The Blessed Day Approaches</h2>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
           <Item value={timeLeft.days} label="Days" />
-          <div style={{ fontSize: '2rem', padding: '20px', color: 'rgba(0,0,0,0.1)' }}>:</div>
+          <div style={{ fontSize: '1.5rem', padding: '15px 5px', color: 'rgba(0,0,0,0.1)', display: 'flex', alignItems: 'center' }}>:</div>
           <Item value={timeLeft.hours} label="Hours" />
-          <div style={{ fontSize: '2rem', padding: '20px', color: 'rgba(0,0,0,0.1)' }}>:</div>
+          <div style={{ fontSize: '1.5rem', padding: '15px 5px', color: 'rgba(0,0,0,0.1)', display: 'flex', alignItems: 'center' }}>:</div>
           <Item value={timeLeft.minutes} label="Minutes" />
-          <div style={{ fontSize: '2rem', padding: '20px', color: 'rgba(0,0,0,0.1)' }}>:</div>
+          <div style={{ fontSize: '1.5rem', padding: '15px 5px', color: 'rgba(0,0,0,0.1)', display: 'flex', alignItems: 'center' }}>:</div>
           <Item value={timeLeft.seconds} label="Seconds" />
         </div>
       </div>

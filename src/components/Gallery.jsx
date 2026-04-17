@@ -18,7 +18,7 @@ const Gallery = () => {
         <div className="divider-gold" />
       </div>
 
-      <div style={{ 
+      <div className="gallery-grid" style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(3, 1fr)', 
         gridAutoRows: '250px',

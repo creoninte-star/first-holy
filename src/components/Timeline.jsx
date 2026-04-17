@@ -14,9 +14,9 @@ const Timeline = () => {
     <section id="schedule" className="section-container" style={{ textAlign: 'center' }}>
       <h2 style={{ fontSize: '3rem', color: 'var(--navy)', marginBottom: '60px' }}>Ceremonial Timeline</h2>
       
-      <div style={{ maxWidth: '700px', margin: '0 auto', position: 'relative' }}>
+      <div className="timeline-container" style={{ maxWidth: '700px', margin: '0 auto', position: 'relative' }}>
         {/* Central Vertical Line */}
-        <div style={{
+        <div className="timeline-line" style={{
           position: 'absolute',
           left: '50%',
           top: 0,
@@ -32,16 +32,18 @@ const Timeline = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
+            className="timeline-item"
             style={{
               display: 'flex',
               justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end',
               textAlign: index % 2 === 0 ? 'right' : 'left',
               marginBottom: '50px',
-              position: 'relative'
+              position: 'relative',
+              width: '100%'
             }}
           >
             {/* Timeline Dot */}
-            <div style={{
+            <div className="timeline-dot" style={{
               position: 'absolute',
               left: '50%',
               top: '10px',
@@ -54,7 +56,7 @@ const Timeline = () => {
               zIndex: 2
             }} />
 
-            <div style={{ width: '45%' }}>
+            <div className="timeline-content" style={{ width: '45%' }}>
               <span style={{ 
                 color: 'var(--gold-dark)', 
                 fontSize: '0.9rem', 
