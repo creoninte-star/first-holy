@@ -192,22 +192,22 @@ h1, h2, h3, h4 {
     width: 100% !important;
   }
 
-  .nav-links {
-    gap: 15px !important;
+  .nav-logo {
+    display: none !important;
   }
   
-  .nav-links a {
-    font-size: 0.65rem !important;
+  .nav-links-desktop {
+    display: none !important;
+  }
+  
+  .nav-mobile-trigger {
+    display: block !important;
+    width: 100%;
+    text-align: right;
   }
 
-  .btn-premium {
-    width: 100% !important;
-    padding: 14px 20px !important;
-    font-size: 0.8rem !important;
-  }
-
-  .grid-responsive {
-    grid-template-columns: 1fr !important;
+  .nav-mobile-trigger svg {
+    margin-left: auto;
   }
 
   .sacred-label {
