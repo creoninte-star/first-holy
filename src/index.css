@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --ivory: #FAF9F6;
+  --champagne: #F7E7CE;
+  --gold: #D4AF37;
+  --gold-dark: #B8860B;
+  --navy: #1A2A44;
+  --charcoal: #333333;
+  --white: #FFFFFF;
+  --text-main: #333333;
+  --text-muted: #666666;
+  
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section-container {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.navy-text {
+  color: var(--navy);
+}
+
+.btn-premium {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--navy);
+  border-radius: 50px; /* Changed to pill shape */
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-premium::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-premium:hover::after {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  background-color: transparent;
+  color: var(--navy);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.btn-outline:hover {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.sacred-label {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--navy); /* Changed from gold for contrast */
+  margin-bottom: 20px;
+  display: block;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.page-border {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.card-luxury {
+  background: white;
+  padding: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card-luxury::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  pointer-events: none;
+}
+
+.divider-gold {
+  width: 100px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin 5s linear infinite;
+}
