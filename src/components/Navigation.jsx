@@ -73,7 +73,7 @@ const Navigation = () => {
 
       {/* Mobile Menu Trigger */}
       <div className="nav-mobile-trigger" style={{ display: 'none', color: 'var(--navy)', cursor: 'pointer' }} onClick={() => setIsMobileMenuOpen(true)}>
-        <MoreVertical size={28} />
+        <Menu size={32} />
       </div>
 
       {/* Mobile Drawer */}
